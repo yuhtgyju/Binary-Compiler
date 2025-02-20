@@ -29,7 +29,16 @@ Python 3.5+ (Tested with Python 3.12.0)
 
 Clang (Installed and accessible from the command line)
 
+## Updates
+-js required Node.js and pkg to be installed.
+
+--lua requires Lua to be installed.
+
+--java requires Java to be installed. (JDK).
+
+--cpp requires clang++ to be installed.
+
 # IMPORTANT
 atb.py: Converts ASCII code to binary. If you don't know the ASCII binary tables, use this script to convert your code.
 
-bta.py: Converts binary back to ASCII, then compiles the resulting code into an executable. It acts as the compiler for your binary code.
+bin_compile.py: Converts binary back to ASCII, then compiles the resulting code into an executable. It acts as the compiler for your binary code.
