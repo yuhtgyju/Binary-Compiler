@@ -17,6 +17,8 @@ Finally, use bta.py to compile the binary into an executable.
 
 ex: python3 bta.py temp.bin
 
+this will output as output.exe, this is your compiled file! use ./output.exe to run it! if it works, you successfuly compiled from binary to an executable! good job!
+
 this will require Clang (See requirements) for now, as this currently only supports C. other languages will be added in support later.
 
 
