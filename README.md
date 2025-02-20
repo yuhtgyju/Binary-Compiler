@@ -10,6 +10,7 @@ This is more of an esoteric project.
 First, if you dont already have some binaryfied ascii ready, use atb.py first on a text file that you have any text in. You can use the -A flag to see the binary output if you'd like.
 
 ex: python3 atb.py ascii.txt
+
 ex2: python3 atb.py ascii.txt -A
 
 if you have followed the first step, you would now have temp.bin in the same directory that you used atb.py in. this has all the binary info about what you converted. DO NOT EDIT THIS. even one bit flip could lead to a different output or, more likely, just crashes.
