@@ -100,6 +100,13 @@ bin_to_ascii_dict = {
 import sys
 import subprocess
 
+if "--cpp" in sys.argv:
+    file_name = "temp.cpp"
+    print("C++ Mode...")
+elif "-c" in sys.argv:
+    print("C Mode...")
+    file_name = "temp.c"
+
 try:
     input_File = sys.argv[1]
 except IndexError:
@@ -126,10 +133,12 @@ inputfile_list = [chunk for chunk in inputfile_list if len(chunk) == 8]
 output_string = ''.join(bin_to_ascii_dict.get(line, "Error") for line in inputfile_list)
 
 # Save the output to a file and print it
-with open("temp.c", "w") as file:
+with open(file_name, "w") as file:
     file.write(output_string)
 
 import os
-subprocess.run("clang temp.c -o output")
-
-os.remove("temp.c")
+if "-c" in sys.argv:
+   subprocess.run("clang temp.c -o output")
+elif "--cpp" in sys.argv:
+   subprocess.run("clang++ temp.cpp -o output")
+os.remove(file_name)
