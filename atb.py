@@ -41,7 +41,8 @@ with open("temp.bin", "w") as file:
     file.write(binary_output)
     file.close()
 
-# Read and print the binary content
-with open("temp.bin", "r") as file:
-    print(file.read())
-    file.close()
+# Read and print the binary content if -A is provided.
+if "-A" in sys.argv:
+    with open("temp.bin", "r") as file:
+        print(file.read())
+        file.close()
