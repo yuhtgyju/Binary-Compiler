@@ -15,7 +15,7 @@ ex2: python3 atb.py -A ascii.txt
 
 if you have followed the first step, you would now have temp.bin in the same directory that you used atb.py in. this has all the binary info about what you converted. DO NOT EDIT THIS. even one bit flip could lead to a different output or, more likely, just crashes.
 
-Finally, use bta.py to compile the binary into an executable. 
+Finally, use bta.py to compile the binary(code) into an executable. 
 
 ex: python3 bta.py temp.bin
 
