@@ -106,6 +106,15 @@ if "--cpp" in sys.argv:
 elif "-c" in sys.argv:
     print("C Mode...")
     file_name = "temp.c"
+elif "--java" in sys.argv:
+    print("Java Mode...")
+    file_name = "Main.java"
+elif "--lua" in sys.argv:
+    print("Lua Mode...")
+    file_name = "main.lua"
+elif "-js" in sys.argv:
+    print("JavaScript Mode...")
+    file_name = "temp.js"
 
 try:
     input_File = sys.argv[1]
@@ -138,7 +147,12 @@ with open(file_name, "w") as file:
 
 import os
 if "-c" in sys.argv:
-   subprocess.run("clang temp.c -o output")
+    subprocess.run("clang temp.c -o output")
 elif "--cpp" in sys.argv:
-   subprocess.run("clang++ temp.cpp -o output")
-os.remove(file_name)
+    subprocess.run("clang++ temp.cpp -o output")
+elif "--java" in sys.argv:
+    subprocess.run("javac Main.java")
+elif "-js" in sys.argv:
+    subprocess.run("pkg --targets node16 temp.js -o output")
+if not file_name == "main.lua":
+    os.remove(file_name)
