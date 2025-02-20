@@ -30,7 +30,7 @@ Python 3.5+ (Tested with Python 3.12.0)
 Clang (Installed and accessible from the command line)
 
 ## Updates
--js required Node.js and pkg to be installed.
+-js requires Node.js and pkg to be installed.
 
 --lua requires Lua to be installed.
 
