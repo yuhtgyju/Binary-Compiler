@@ -1,5 +1,5 @@
 # Binary-Compiler
-Compile Binary to an executeable.
+Compile Binary to an executable.
 
 Currently only supports C code, as you need clang to compile.
 
