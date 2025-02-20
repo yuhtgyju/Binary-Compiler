@@ -153,6 +153,11 @@ elif "--cpp" in sys.argv:
 elif "--java" in sys.argv:
     subprocess.run("javac Main.java")
 elif "-js" in sys.argv:
-    subprocess.run("pkg --targets node16 temp.js -o output")
+    try:
+        with open("error_log.txt", "a") as log_file:
+            subprocess.run("pkg --targets node16 temp.js -o output", shell=True, stdout=subprocess.DEVNULL, stderr=log_file)
+    except FileNotFoundError:
+        print("Compilation Error.")
+        sys.exit()
 if not file_name == "main.lua":
     os.remove(file_name)
