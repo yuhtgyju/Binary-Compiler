@@ -11,7 +11,7 @@ First, if you dont already have some binaryfied ascii ready, use atb.py first on
 
 ex: python3 atb.py ascii.txt
 
-ex2: python3 atb.py ascii.txt -A
+ex2: python3 atb.py -A ascii.txt
 
 if you have followed the first step, you would now have temp.bin in the same directory that you used atb.py in. this has all the binary info about what you converted. DO NOT EDIT THIS. even one bit flip could lead to a different output or, more likely, just crashes.
 
