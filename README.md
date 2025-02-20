@@ -8,6 +8,6 @@ This is more of an esoteric project.
 
 
 # REQUIREMENTS
-Python 3.5+ (I used 3.12.0)
+Python 3.5+ (Tested with Python 3.12.0)
 
-Clang
+Clang (Installed and accessible from the command line)
