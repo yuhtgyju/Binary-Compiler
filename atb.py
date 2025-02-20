@@ -20,7 +20,10 @@ ascii_to_bin_dict = {
 import sys
 
 try:
-    input_File = sys.argv[1]
+    if sys.argv[1] == "-A":
+        input_File = sys.argv[2]
+    else:
+        input_File = sys.argv[1]
 except IndexError:
     print("Please specify a file to compile!")
     sys.exit()
@@ -41,7 +44,7 @@ with open("temp.bin", "w") as file:
     file.write(binary_output)
     file.close()
 
-# Read and print the binary content if -A is provided.
+# Read and print the binary content
 if "-A" in sys.argv:
     with open("temp.bin", "r") as file:
         print(file.read())
