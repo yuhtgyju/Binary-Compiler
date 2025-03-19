@@ -1,7 +1,7 @@
 # Binary-Compiler
 Compile Binary to an executable.
 
-Currently only supports C code, as you need clang to compile.
+Currently only supports C, C++, Java, Lua, and JS code.
 
 
 This is more of an esoteric project.
